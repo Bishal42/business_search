@@ -4,6 +4,7 @@ import { StyleSheet, View } from "react-native";
 import Category from "./src/component/Category";
 import Header from "./src/component/Header";
 import Iteam from "./src/component/Iteam";
+import Resturent from "./src/component/Resturent";
 import Search from "./src/component/Search";
 
 export default function App() {
@@ -40,6 +41,7 @@ export default function App() {
       <Header />
       <Search endEditing={setTerm} />
       <Category catogary={catogryItem} setTerm={setTerm} term={term} />
+      <Resturent />
     </View>
   );
 }
