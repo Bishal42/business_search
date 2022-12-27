@@ -8,31 +8,31 @@ import Resturent from "./src/component/Resturent";
 import Search from "./src/component/Search";
 
 export default function App() {
-  const [term, setTerm] = useState("");
+  const [term, setTerm] = useState("Pizza");
 
   const catogryItem = [
     {
-      name: "Burger",
+      name: "burger",
       imageURL: require("./assets/images/burger.png"),
     },
     {
-      name: "Pasta",
+      name: "pasta",
       imageURL: require("./assets/images/pasta.png"),
     },
     {
-      name: "Pizza",
+      name: "pizza",
       imageURL: require("./assets/images/pizza.png"),
     },
     {
-      name: "Smoothi",
+      name: "smoothi",
       imageURL: require("./assets/images/smoothies.png"),
     },
     {
-      name: "Steak",
+      name: "steak",
       imageURL: require("./assets/images/steak.png"),
     },
     {
-      name: "Cake",
+      name: "cake",
       imageURL: require("./assets/images/cake.png"),
     },
   ];
@@ -41,7 +41,7 @@ export default function App() {
       <Header />
       <Search endEditing={setTerm} />
       <Category catogary={catogryItem} setTerm={setTerm} term={term} />
-      <Resturent />
+      <Resturent term={term} />
     </View>
   );
 }

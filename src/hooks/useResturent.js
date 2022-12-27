@@ -16,15 +16,16 @@ const UseResturent = () => {
     try {
       const response = await yelp.get("/search", {
         params: {
-          limit: 5,
-          term: term,
+          limit: 8,
+          term: term.term,
           location: "san joes",
         },
       });
+
       setResult({
         data: response.data.businesses,
         error: null,
-        loading: true,
+        loading: false,
       });
     } catch (error) {
       setResult({
